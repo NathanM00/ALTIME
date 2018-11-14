@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "250194166086",
+    "firebase_url": "https://altime-c395e.firebaseio.com",
+    "project_id": "altime-c395e",
+    "storage_bucket": "altime-c395e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250194166086:android:700a57b98fc87427",
+        "android_client_info": {
+          "package_name": "com.example.altime.altime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250194166086-rgq9fqfs2i7vgdottk13iantpcqh9s23.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.altime.altime",
+            "certificate_hash": "f7c36cc2853a2c5f221f9a8d59836f88ef3fdf6c"
+          }
+        },
+        {
+          "client_id": "250194166086-c7fkcu4f7lfkhih9nj7j46luve93eti6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkjmq0KYKGCao3eUFgXhdgR-me3vjVxwY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250194166086-c7fkcu4f7lfkhih9nj7j46luve93eti6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
