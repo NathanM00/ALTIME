@@ -15,25 +15,11 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="99dp"
-        android:text="Menu principal 1.0"
+        android:text="Calendario 1.0"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_salir"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="209dp"
-        android:background="@drawable/btn_iniciar"
-        android:elevation="10dp"
-        android:text="cerrar sesion"
-        android:textColor="#E8475B"
-        app:layout_constraintStart_toStartOf="@+id/tv_menu"
-        app:layout_constraintTop_toBottomOf="@+id/tv_menu" />
 
 
     <android.support.design.widget.BottomNavigationView

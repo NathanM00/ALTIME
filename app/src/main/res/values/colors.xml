@@ -3,4 +3,24 @@
     <color name="colorPrimary">#E8475B</color>
     <color name="colorPrimaryDark">#c92438</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="navBlanco">#dfdfdf</color>
+
+
+    <color name="colorMenu">#E8475B</color>
+    <color name="colorMenuOs">#c92438</color>
+
+    <color name="colorCal">#F18768</color>
+    <color name="colorCalOs">#ce5835</color>
+
+    <color name="colorPet">#FF9801</color>
+    <color name="colorPetOs">#f49619</color>
+
+    <color name="colorPers">#FEC82A</color>
+    <color name="colorPersOs">#E2A60E</color>
+
+    <color name="colorCon">#1E8DCD</color>
+    <color name="colorConOs">#0C6B9C</color>
+
+
 </resources>
