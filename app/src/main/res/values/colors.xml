@@ -4,8 +4,7 @@
     <color name="colorPrimaryDark">#c92438</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="navBlanco">#dfdfdf</color>
-
+    <color name="navGris">#dcdcdc</color>
 
     <color name="colorMenu">#E8475B</color>
     <color name="colorMenuOs">#c92438</color>
@@ -21,6 +20,5 @@
 
     <color name="colorCon">#1E8DCD</color>
     <color name="colorConOs">#0C6B9C</color>
-
 
 </resources>

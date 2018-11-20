@@ -2,7 +2,7 @@
     <string name="app_name">ALTIME</string>
     <string name="nav_home">Home</string>
     <string name="nav_pet">Pet</string>
-    <string name="nav_person">Person</string>
+    <string name="nav_perfil">Person</string>
     <string name="nav_calendar">Calendar</string>
     <string name="title_activity_bottom">BottomActivity</string>
     <string name="title_home">Home</string>

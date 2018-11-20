@@ -1,14 +1,12 @@
 package com.example.altime.altime;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -43,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         if(usuario != null){
 
             finish();
-            startActivity( new Intent(LoginActivity.this, MenuActivity.class));
+            startActivity( new Intent(LoginActivity.this, MainActivity.class));
 
         }
 
@@ -68,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     if(task.isSuccessful()){
 
-                        startActivity( new Intent(LoginActivity.this, MenuActivity.class));
+                        startActivity( new Intent(LoginActivity.this, MainActivity.class));
                         Toast.makeText(LoginActivity.this, "Login exitoso", Toast.LENGTH_SHORT).show();
 
                     }else {

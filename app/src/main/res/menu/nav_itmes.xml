@@ -15,13 +15,12 @@
     <item
         android:title="@string/nav_pet"
         android:icon="@drawable/ic_menu_pet"
-        android:id="@+id/nav_per"
+        android:id="@+id/nav_pet"
         />
     <item
-        android:title="@string/nav_person"
+        android:title="@string/nav_perfil"
         android:icon="@drawable/ic_menu_person"
-        android:id="@+id/nav_pers"
+        android:id="@+id/nav_perfil"
         />
-
 
 </menu>

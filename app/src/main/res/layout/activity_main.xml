@@ -8,26 +8,16 @@
     android:background="#FAFAFB"
     >
 
-    <TextView
-        android:id="@+id/tv_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="99dp"
-        android:text="Menu principal 1.0"
-        android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--
 
+Este es el boton para cerrar sesion para el que lo necesita
     <Button
         android:id="@+id/btn_salir"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="209dp"
+        android:layout_marginTop="216dp"
         android:background="@drawable/btn_iniciar"
         android:elevation="10dp"
         android:text="cerrar sesion"
@@ -35,6 +25,14 @@
         app:layout_constraintStart_toStartOf="@+id/tv_menu"
         app:layout_constraintTop_toBottomOf="@+id/tv_menu" />
 
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_nav"
+        android:id="@+id/fragment_contenedor"
+        />
 
     <android.support.design.widget.BottomNavigationView
         android:layout_width="match_parent"
