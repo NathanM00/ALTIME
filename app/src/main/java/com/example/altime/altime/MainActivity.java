@@ -1,10 +1,13 @@
 package com.example.altime.altime;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,6 +23,7 @@ public class MainActivity extends AppCompatActivity{
     FirebaseAuth auth;
     Button btn_salir;
     BottomNavigationView nv_bar;
+    ActionBar barra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,8 @@ public class MainActivity extends AppCompatActivity{
         db = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
         nv_bar = findViewById(R.id.main_nav);
+
+        barra = getSupportActionBar();
 
         FirebaseUser usuario = auth.getCurrentUser();
 
@@ -55,18 +61,26 @@ public class MainActivity extends AppCompatActivity{
 
                     case R.id.nav_home:
                          fragment = new HomeFragment();
-                    break;
+                        barra.setBackgroundDrawable( new ColorDrawable( Color.parseColor("#E8475B"))  );
+                        barra.setTitle("AlTime");
+                        break;
 
                     case R.id.nav_cal:
                         fragment = new CalendarFragment();
+                        barra.setBackgroundDrawable( new ColorDrawable( Color.parseColor("#F18768"))  );
+                        barra.setTitle("Calendario");
                         break;
 
                     case R.id.nav_pet:
                         fragment = new PetFragment();
+                        barra.setBackgroundDrawable( new ColorDrawable( Color.parseColor("#FF9801"))  );
+                        barra.setTitle("Mascota");
                         break;
 
                     case R.id.nav_perfil:
                         fragment = new PerfilFragment();
+                        barra.setBackgroundDrawable( new ColorDrawable( Color.parseColor("#FEC82A"))  );
+                        barra.setTitle("Perfil");
                         break;
                 }
 
