@@ -8,6 +8,7 @@
     android:background="#FAFAFB"
     >
 
+
 <!--
 
 Este es el boton para cerrar sesion para el que lo necesita
@@ -43,8 +44,8 @@ Este es el boton para cerrar sesion para el que lo necesita
         tools:layout_editor_absoluteY="453dp"
         app:menu="@menu/nav_itmes"
         android:background="#fff"
-        app:itemIconTint="@color/nav_item_colors"
-        app:itemTextColor="@color/nav_item_colors"
+        app:itemIconTint="@color/nav_item_menu"
+        app:itemTextColor="@color/nav_item_menu"
         android:id="@+id/main_nav"
         />
 

@@ -13,10 +13,10 @@
     <color name="colorCalOs">#ce5835</color>
 
     <color name="colorPet">#FF9801</color>
-    <color name="colorPetOs">#f49619</color>
+    <color name="colorPetOs">#da8e27</color>
 
-    <color name="colorPers">#FEC82A</color>
-    <color name="colorPersOs">#E2A60E</color>
+    <color name="colorPerfil">#FEC82A</color>
+    <color name="colorPerfilOs">#E2A60E</color>
 
     <color name="colorCon">#1E8DCD</color>
     <color name="colorConOs">#0C6B9C</color>
