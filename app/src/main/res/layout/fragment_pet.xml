@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/colorPetOs"
+    android:background="@color/backgroundGris"
     >
 
     <TextView
@@ -9,9 +10,79 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="194dp"
-        android:text="Estas viendo la pantalla de la mascota"
-        android:textColor="#fff"
-        android:textSize="20dp" />
+        android:layout_marginTop="16dp"
+        android:text="Franckie"
+        android:textSize="30dp"
+        android:textColor="#212121"
+        />
+
+    <ImageView
+        android:id="@+id/iv_felicidad"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="67dp"
+        app:srcCompat="@drawable/iconofelicidad" />
+
+    <ProgressBar
+        android:id="@+id/pgb_felicidad"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="233dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="79dp"
+        android:max="100"
+        android:progress="90"
+        android:progressDrawable="@drawable/barra_progreso"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_energia"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/iv_felicidad"
+        android:layout_marginTop="141dp"
+        app:srcCompat="@drawable/iconoenergia" />
+
+    <ProgressBar
+        android:id="@+id/pgb_energia"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="233dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/pgb_felicidad"
+        android:layout_marginTop="150dp"
+        android:max="100"
+        android:progress="90"
+        android:progressDrawable="@drawable/barra_progreso"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_franckiePet"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="81dp"
+        android:src="@drawable/mascota_petfragment" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_petMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        app:backgroundTint="@color/colorPet"
+        app:srcCompat="@drawable/baseline_menu_black_24dp" />
+
 
 </RelativeLayout>
