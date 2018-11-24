@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,12 +28,16 @@ public class PetFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e("Felicidad original",""+felicidad);
+        Log.e("Energia original",""+energia);
 
         if(getArguments() !=null) {
             felicidad = getArguments().getInt("felicidad");
             energia = getArguments().getInt("energia");
             puesto = getArguments().getBoolean("puesto");
         }
+        Log.e("Felicidad cambiada",""+felicidad);
+        Log.e("Energia cambiada",""+energia);
     }
 
     @Nullable
@@ -79,7 +84,7 @@ public class PetFragment extends Fragment {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                while (felicidad >=0 && energia <=1500){
+                while (felicidad >=0 && energia <=100){
                     felicidad--;
                     energia++;
                     android.os.SystemClock.sleep(1500);
