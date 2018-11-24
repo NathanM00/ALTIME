@@ -53,6 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="270dp"
             android:orientation="vertical">
+            
 
             <ImageButton
                 android:id="@+id/btn_brerrow"
