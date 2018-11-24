@@ -1,27 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/colorPerfilOs"
+    android:background="#fafafb"
     >
 
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/profile_photo"
+         />
+
     <TextView
+        android:id="@+id/tv_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="40dp"
+        android:text="Nombre Apellido"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_codigo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="194dp"
-        android:text="Estas viendo el perfil de usuario"
-        android:textColor="#fff"
-        android:textSize="20dp" />
+        android:layout_alignStart="@+id/tv_nombre"
+        android:layout_marginTop="77dp"
+        android:text="Codigo"
+        android:textSize="15dp" />
 
     <Button
-        android:id="@+id/timer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btn_materiacoe"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignEnd="@+id/img_profile"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="147dp"
+        android:background="#ffff"
+        android:text="Coe" />
+
+    <Button
+        android:id="@+id/btn_materialogica"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignEnd="@+id/tv_nombre"
+        android:layout_alignTop="@+id/btn_materiacoe"
+        android:background="#ffffff"
+        android:text="logica" />
+
+    <Button
+        android:id="@+id/btn_materiaalgebra"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignEnd="@+id/img_profile"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="244dp"
-        android:text="Timer" />
+        android:layout_marginBottom="150dp"
+        android:background="#ffffff"
+        android:text="algebra" />
+
+    <Button
+        android:id="@+id/btn_materiaintro"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignEnd="@+id/tv_nombre"
+        android:layout_alignTop="@+id/btn_materiaalgebra"
+        android:background="#ffffff"
+        android:text="intro" />
+
+    <Button
+        android:id="@+id/btn_materiabidi"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignEnd="@+id/img_profile"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:background="#ffffff"
+        android:text="bidi" />
+
 
 
 </RelativeLayout>

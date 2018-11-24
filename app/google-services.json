@@ -8,6 +8,50 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:250194166086:android:f1960825d7e83379",
+        "android_client_info": {
+          "package_name": "com.amayha.dmi.calendarioaltime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250194166086-7hnb4e5bvdrmpjatkmjmsaig73ag9ugj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amayha.dmi.calendarioaltime",
+            "certificate_hash": "9b38bf556a30c017894a344ec5dbe37b53f64d25"
+          }
+        },
+        {
+          "client_id": "250194166086-c7fkcu4f7lfkhih9nj7j46luve93eti6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkjmq0KYKGCao3eUFgXhdgR-me3vjVxwY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250194166086-c7fkcu4f7lfkhih9nj7j46luve93eti6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:250194166086:android:700a57b98fc87427",
         "android_client_info": {
           "package_name": "com.example.altime.altime"
@@ -20,6 +64,118 @@
           "android_info": {
             "package_name": "com.example.altime.altime",
             "certificate_hash": "f7c36cc2853a2c5f221f9a8d59836f88ef3fdf6c"
+          }
+        },
+        {
+          "client_id": "250194166086-d16jdldk1aie9giaid6e9m7v1uriieeu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.altime.altime",
+            "certificate_hash": "468f2cf3f1186f137dd65c5b5f8b1f2fb405c73a"
+          }
+        },
+        {
+          "client_id": "250194166086-6lpic6cenfu8lbkvb7eh2tchhmmo4s40.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.altime.altime",
+            "certificate_hash": "624e29b89cb2ec1095293448c7f4db0e5a336bba"
+          }
+        },
+        {
+          "client_id": "250194166086-c7fkcu4f7lfkhih9nj7j46luve93eti6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkjmq0KYKGCao3eUFgXhdgR-me3vjVxwY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250194166086-c7fkcu4f7lfkhih9nj7j46luve93eti6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250194166086:android:c6873fc8a3469005",
+        "android_client_info": {
+          "package_name": "dmi.com.calendar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250194166086-6rqm8spa3pok7leu52aniuv9bcehtj61.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dmi.com.calendar",
+            "certificate_hash": "624e29b89cb2ec1095293448c7f4db0e5a336bba"
+          }
+        },
+        {
+          "client_id": "250194166086-c7fkcu4f7lfkhih9nj7j46luve93eti6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkjmq0KYKGCao3eUFgXhdgR-me3vjVxwY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250194166086-c7fkcu4f7lfkhih9nj7j46luve93eti6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250194166086:android:5438a525e9718575",
+        "android_client_info": {
+          "package_name": "dmi.com.perfil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250194166086-s4cp4srls0chq1ciai4fqoq2ttl54ufn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dmi.com.perfil",
+            "certificate_hash": "624e29b89cb2ec1095293448c7f4db0e5a336bba"
+          }
+        },
+        {
+          "client_id": "250194166086-bcp2p1s3a9knjso1bn30hgl51fu4cqq3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dmi.com.perfil",
+            "certificate_hash": "468f2cf3f1186f137dd65c5b5f8b1f2fb405c73a"
           }
         },
         {
