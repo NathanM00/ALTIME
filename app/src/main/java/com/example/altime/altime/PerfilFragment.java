@@ -41,6 +41,10 @@ public class PerfilFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                FragmentTransaction frag = getFragmentManager().beginTransaction();
+                frag.replace(R.id.fragment_contenedor, new CoeFragment());
+                frag.commit();
+
                 //Intent intent = new Intent(PerfilFragment.this, );
                 //startActivity(intent);
 

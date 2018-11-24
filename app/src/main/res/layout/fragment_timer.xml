@@ -10,49 +10,47 @@
         android:id="@+id/chronometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="139dp"
-        android:textSize="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_start"
-        app:layout_constraintEnd_toEndOf="@+id/btn_start" />
-
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="189dp"
-        android:onClick="startChronometer"
-        android:text="Start"
-        app:layout_constraintBottom_toTopOf="@+id/btn_pause"
-        app:layout_constraintStart_toStartOf="@+id/btn_pause" />
+        android:layout_marginBottom="124dp"
+        android:textSize="30dp" />
 
-    <Button
-        android:id="@+id/btn_pause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/plei"
+        android:layout_width="145dp"
+        android:layout_height="147dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="117dp"
-        android:onClick="pauseChronometer"
-        android:text="Pause"
-        app:layout_constraintBottom_toTopOf="@+id/btn_guardar"
-        app:layout_constraintStart_toStartOf="@+id/btn_guardar" />
+        android:layout_marginBottom="11dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/play" />
 
-
-    <Button
-        android:id="@+id/btn_guardar"
+    <ImageButton
+        android:id="@+id/pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="52dp"
-        android:text="Save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:background="@android:color/transparent"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/pause" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="262dp"
+        android:layout_height="391dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/gif" />
+
+    <ImageView
+        android:id="@+id/descanso"
+        android:layout_width="98dp"
+        android:layout_height="144dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/plei"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/descanso" />
 
 
 </RelativeLayout>
