@@ -2,17 +2,22 @@ package com.example.altime.altime;
 
 public class Evento {
 
-    private String nombre;
-    private String descripcion;
-    private String fechacreacion;
-    private String diasrestantes;
+    public String nombre;
+    public String descripcion;
+    public String fechacreacion;
+    public String diasrestantes;
+    public String uid;
 
     public Evento() {
 
     }
 
-    public Evento(String nombre, String fechacreacion, String diasrestantes) {
-
+    public Evento(String nombre, String descripcion, String fechacreacion, String diasrestantes, String uid) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.fechacreacion = fechacreacion;
+        this.diasrestantes = diasrestantes;
+        this.uid = uid;
     }
 
     public String getNombre() {
@@ -31,6 +36,14 @@ public class Evento {
         this.descripcion = descripcion;
     }
 
+    public String getFechacreacion() {
+        return fechacreacion;
+    }
+
+    public void setFechacreacion(String fechacreacion) {
+        this.fechacreacion = fechacreacion;
+    }
+
     public String getDiasrestantes() {
         return diasrestantes;
     }
@@ -39,11 +52,11 @@ public class Evento {
         this.diasrestantes = diasrestantes;
     }
 
-    public String getFechacreacion() {
-        return fechacreacion;
+    public String getUid() {
+        return uid;
     }
 
-    public void setFechacreacion(String fechacreacion) {
-        this.fechacreacion = fechacreacion;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 }
