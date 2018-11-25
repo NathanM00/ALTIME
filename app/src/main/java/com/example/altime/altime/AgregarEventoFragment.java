@@ -31,7 +31,6 @@ public class AgregarEventoFragment extends Fragment {
     EditText ed_descripcionEvento;
     TextView btn_cancelarEvento;
     Button btn_guardarEvento;
-    ListView listaEventos;
     String fechaSeleccionada;
 
     DatabaseReference reference;
@@ -62,36 +61,6 @@ public class AgregarEventoFragment extends Fragment {
         ed_descripcionEvento = vista.findViewById(R.id.ed_descripcionEvento);
         btn_cancelarEvento = vista.findViewById(R.id.btn_cancelarEvento);
         btn_guardarEvento = vista.findViewById(R.id.btn_guardarEvento);
-        listaEventos = vista.findViewById(R.id.listaEventos);
-
-//        DatabaseReference reference = db.getReference().child("eventos");
-//
-//        reference.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                Evento event = dataSnapshot.getValue(Evento.class);
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
-
-//        Query ref = db.getReference().child("eventos");
-//        FirebaseListOptions<Evento> options = new FirebaseListOptions.Builder<Evento>().setLayout(R.layout.renglon).setQuery(ref, Evento.class).build();
-//
-//        adapter = new FirebaseListAdapter<Evento>(options) {
-//            @Override
-//            protected void populateView(@NonNull View v, @NonNull Evento model, int position) {
-//
-//                TextView nombre = v.findViewById(R.id.nombrerenglon);
-//
-//                nombre.setText(model.getNombre());
-//            }
-//        };
-//
-//        lista.setAdapter(adapter);
 
 
         btn_guardarEvento.setOnClickListener(new View.OnClickListener() {
@@ -106,6 +75,14 @@ public class AgregarEventoFragment extends Fragment {
                 //String dias_restantes = "numero dias";
 
                 //db.getReference().child("eventos").child(nombre_evento);
+                Evento evento = new Evento();
+                evento.setDescripcion(descripcion_evento);
+                evento.setFechacreacion(fechaSeleccionada);
+                evento.setDiasrestantes("10");
+                evento.setNombre(nombre_evento);
+                evento.setUid(System.currentTimeMillis() + "");
+
+                db.getReference().child("eventos").push().setValue(evento);
 
                 Toast.makeText(getContext(), "fecha" + fechaSeleccionada, Toast.LENGTH_SHORT).show();
 
@@ -131,16 +108,4 @@ public class AgregarEventoFragment extends Fragment {
 
         return vista;
     }
-
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        adapter.startListening();
-//    }
-//
-//    @Override
-//    protected void onStop() {
-//        super.onStop();
-//        adapter.stopListening();
-//    }
 }

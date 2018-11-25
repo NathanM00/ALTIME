@@ -1,22 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    android:background="#ffffff"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_volver"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_gravity="center"
+        android:background="#f96"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_volver"
+                android:layout_width="180dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/volver_detalles" />
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nombreEventoDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="45dp"
+                android:text="Nombre del Evento"
+                android:textColor="#ffffff"
+                android:textSize="28dp" />
+
+            <TextView
+                android:id="@+id/DiasRestantesDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Dias restantes"
+                android:textColor="#ffffff"
+                android:textSize="28dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="volver"
-        />
+        android:orientation="vertical">
 
-    <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="20dp"
+            android:text="Cuando:"
+            android:textColor="#212121"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/fechaSeleccionadaDetalles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="8dp"
+            android:text="la fechaseleccionada:"
+            android:textColor="#746F7D"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="10dp"
+            android:text="Descripción:"
+            android:textColor="#212121"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/descripcionEventoDetalles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="8dp"
+            android:text="la descripcion esa"
+            android:textColor="#746F7D"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#EFEFEF"></LinearLayout>
+
+
+    <ImageButton
         android:id="@+id/btn_eliminarEvento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="eliminar"
-        />
-
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/btn_eliminar_img" />
 
 </LinearLayout>
