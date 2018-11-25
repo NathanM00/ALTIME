@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class PerfilFragment extends Fragment {
@@ -22,6 +23,7 @@ public class PerfilFragment extends Fragment {
     Button btn_logica;
     Button btn_bidi;
     Button btn_intro;
+    RelativeLayout lecturaunoxxd;
 
 
     @Nullable
@@ -36,13 +38,19 @@ public class PerfilFragment extends Fragment {
         btn_logica = vista.findViewById(R.id.btn_materialogica);
         btn_intro = vista.findViewById(R.id.btn_materiaintro);
         btn_bidi = vista.findViewById(R.id.btn_materiabidi);
-
+        lecturaunoxxd = vista.findViewById(R.id.lecturaunoxxd);
         btn_coe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 //Intent intent = new Intent(PerfilFragment.this, );
                 //startActivity(intent);
+
+            }
+        });
+        lecturaunoxxd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
             }
         });

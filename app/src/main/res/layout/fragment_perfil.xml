@@ -4,6 +4,8 @@
     android:background="#fafafb"
     >
 
+
+
     <ImageView
         android:id="@+id/img_profile"
         android:layout_width="150dp"
@@ -83,6 +85,32 @@
         android:background="#ffffff"
         android:text="bidi" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/img_profile"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_iniciar"
+        android:elevation="10dp"
+        android:id="@+id/lecturaunoxxd">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="52dp"
+            android:text="Lectura" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="17dp"
+            android:text="Promedio : 30 min" />
+    </RelativeLayout>
 
 
 </RelativeLayout>

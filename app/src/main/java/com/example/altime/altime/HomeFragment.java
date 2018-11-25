@@ -1,9 +1,13 @@
 package com.example.altime.altime;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +32,7 @@ public class HomeFragment extends Fragment {
     ArrayList<Noticia> noticias = new ArrayList<>();
     CustomAdapter adapter;
     DatabaseReference referencia;
+    Bundle bundle = new Bundle();
 
     @Nullable
     @Override
@@ -35,6 +40,8 @@ public class HomeFragment extends Fragment {
 
         vista = inflater.inflate(R.layout.fragment_home, container, false);
         lv = vista.findViewById(R.id.lv_noticias);
+        bundle.putInt("felicidad", 50);
+        bundle.putInt("energia", 80);
 
         // paso 1 para vincular la base de datos
         db = FirebaseDatabase.getInstance();
@@ -63,6 +70,7 @@ public class HomeFragment extends Fragment {
                 }
                 if(noticias.get(position).getTiponoticia().equals("2")) {
                     Fragment fragment = new PetFragment();
+                    fragment.setArguments(bundle);
                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_contenedor,
                             fragment).commit();
                 }

@@ -32,6 +32,10 @@ public class PetFragment extends Fragment {
         Log.e("Energia original",""+energia);
 
         if(getArguments() !=null) {
+
+            Log.e("Felicidad que llega",""+ getArguments().getInt("felicidad"));
+            Log.e("Energia que llega",""+ getArguments().getInt("energia"));
+
             felicidad = getArguments().getInt("felicidad");
             energia = getArguments().getInt("energia");
             puesto = getArguments().getBoolean("puesto");
