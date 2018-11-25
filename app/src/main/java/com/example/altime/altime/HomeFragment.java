@@ -20,6 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
+    
+    // comitea pls
     FirebaseDatabase db;
     ListView lv;
     View vista;
