@@ -14,21 +14,29 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.FirebaseDatabase;
 
-public class TimerFragment extends Fragment {
+public class TimerFragment extends Fragment implements EditDialog.editDialogListener{
     Activity activity;
 
     View vista;
 
     Chronometer chronometer;
-    Button btn_start;
-    Button btn_pause;
-    Button btn_guardar;
+    ImageButton play;
+    ImageButton pause;
+    ImageView descnaso;
+
+    TextView mat;
+    TextView act;
+
+    String materia;
+    String actividad;
 
     long pauseOffSet;
 
@@ -46,6 +54,8 @@ public class TimerFragment extends Fragment {
 
         database = FirebaseDatabase.getInstance();
 
+        openDialog();
+
         chronometer = vista.findViewById(R.id.chronometer);
         chronometer.setFormat("Time: %s");
         chronometer.setBase(SystemClock.elapsedRealtime());
@@ -54,28 +64,41 @@ public class TimerFragment extends Fragment {
             public void onChronometerTick(Chronometer chronometer) {
                 if((SystemClock.elapsedRealtime()- chronometer.getBase()) >= 750000 && (SystemClock.elapsedRealtime()- chronometer.getBase())<= 753000){
                     //chronometer.setBase(SystemClock.elapsedRealtime());
-                    Vibrator placer = (Vibrator) getContext().getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
-                    placer.vibrate(1000);
+                    Vibrator alert = (Vibrator) getContext().getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+                    alert.vibrate(1000);
+                    descnaso.setVisibility(View.VISIBLE);
                     Toast.makeText(getContext(), "Hora de la pausa activa!!", Toast.LENGTH_SHORT).show();
+                }else{
+                    descnaso.setVisibility(View.INVISIBLE);
                 }
+
             }
         });
 
-        btn_start = vista.findViewById(R.id.btn_start);
-        btn_pause = vista.findViewById(R.id.btn_pause);
-        btn_guardar = vista.findViewById(R.id.btn_guardar);
+        play = vista.findViewById(R.id.plei);
+        pause = vista.findViewById(R.id.pause);
+        descnaso = vista.findViewById(R.id.descanso);
 
-        btn_start.setOnClickListener(new View.OnClickListener() {
+        mat = vista.findViewById(R.id.mat);
+        act = vista.findViewById(R.id.act);
+
+        play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startChronometer();
+                Toast.makeText(getContext(), "Comienza el estudio!!", Toast.LENGTH_SHORT).show();
+                play.setVisibility(View.INVISIBLE);
+                pause.setVisibility(View.VISIBLE);
             }
         });
 
-        btn_pause.setOnClickListener(new View.OnClickListener() {
+        pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pauseChronometer();
+
+                pause.setVisibility(View.INVISIBLE);
+                play.setVisibility(View.VISIBLE);
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
@@ -87,8 +110,10 @@ public class TimerFragment extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String savedTime = chronometer.getText().toString();
+                        materia = mat.getText().toString();
+                        actividad = act.getText().toString();
                         Log.e("Tiempo en String", ""+savedTime);
-                        database.getReference().child("timer").push().setValue(savedTime);
+                        database.getReference().child("materias").child(materia).child(actividad).child("timer").push().setValue(savedTime);
                         Toast.makeText(getContext(), "Tu tiempo ha sido guardado", Toast.LENGTH_LONG).show();
                     }
                 });
@@ -104,33 +129,7 @@ public class TimerFragment extends Fragment {
             }
         });
 
-        btn_guardar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                /*AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-
-                builder.setCancelable(true);
-                builder.setTitle("Notificacion");
-                builder.setMessage("Deseas guardar tu timpo actual?");
-
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-
-                builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getContext(), "Tu tiempo ha sido guardado", Toast.LENGTH_LONG).show();
-                    }
-                });
-                builder.show();*/
-
-            }
-        });
 
         return vista;
     }
@@ -152,7 +151,16 @@ public class TimerFragment extends Fragment {
         }
     }
 
-    public void saveChronometer(){
+    public void openDialog(){
+        EditDialog editDialog = new EditDialog();
+        editDialog.setTargetFragment(TimerFragment.this, 1);
+        editDialog.show(getFragmentManager(), "edit dialog");
 
+    }
+
+    @Override
+    public void sendInput(String materia, String actividad) {
+        mat.setText(materia);
+        act.setText(actividad);
     }
 }
