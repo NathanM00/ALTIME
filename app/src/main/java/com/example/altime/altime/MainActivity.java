@@ -26,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
     boolean estudiando =false;
     Bundle bundle = new Bundle();
 
+    //Bundle bunde = new Bundle();
+
+    //public static String KEY_CHILD = "child";
+
+    //String valor = "coe";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_contenedor,
                 new HomeFragment()).commit();
+
+        /*CoeFragment fragment = new CoeFragment();
+
+        bunde.putString(KEY_CHILD, "coe");
+        fragment.setArguments(bunde);*/
 
         barraDeNavegacion();
         barraProgreso();
@@ -88,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_perfil:
                         fragment = new PerfilFragment();
 
+                        /*bunde.putString(KEY_CHILD, valor);
+                        fragment.setArguments(bunde);*/
                         estudiando = true;
                         barra.setBackgroundDrawable( new ColorDrawable( Color.parseColor("#FEC82A"))  );
                         barra.setTitle("Perfil");

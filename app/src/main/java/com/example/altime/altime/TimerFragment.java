@@ -17,11 +17,12 @@ import android.view.ViewGroup;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.FirebaseDatabase;
 
-public class TimerFragment extends Fragment {
+public class TimerFragment extends Fragment implements EditDialog.editDialogListener{
     Activity activity;
 
     View vista;
@@ -31,7 +32,15 @@ public class TimerFragment extends Fragment {
     ImageButton pause;
     ImageView descnaso;
 
+    TextView mat;
+    TextView act;
+
+    String materia;
+    String actividad;
+
     long pauseOffSet;
+
+    //private CountDownTimer mCountTimer;
 
     boolean tiempoCorre;
 
@@ -44,6 +53,8 @@ public class TimerFragment extends Fragment {
         vista = inflater.inflate(R.layout.fragment_timer, container,false);
 
         database = FirebaseDatabase.getInstance();
+
+        openDialog();
 
         chronometer = vista.findViewById(R.id.chronometer);
         chronometer.setFormat("Time: %s");
@@ -67,6 +78,9 @@ public class TimerFragment extends Fragment {
         play = vista.findViewById(R.id.plei);
         pause = vista.findViewById(R.id.pause);
         descnaso = vista.findViewById(R.id.descanso);
+
+        mat = vista.findViewById(R.id.mat);
+        act = vista.findViewById(R.id.act);
 
         play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,8 +110,10 @@ public class TimerFragment extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String savedTime = chronometer.getText().toString();
+                        materia = mat.getText().toString();
+                        actividad = act.getText().toString();
                         Log.e("Tiempo en String", ""+savedTime);
-                        database.getReference().child("timer").push().setValue(savedTime);
+                        database.getReference().child("materias").child(materia).child(actividad).child("timer").push().setValue(savedTime);
                         Toast.makeText(getContext(), "Tu tiempo ha sido guardado", Toast.LENGTH_LONG).show();
                     }
                 });
@@ -135,7 +151,16 @@ public class TimerFragment extends Fragment {
         }
     }
 
-    public void saveChronometer(){
+    public void openDialog(){
+        EditDialog editDialog = new EditDialog();
+        editDialog.setTargetFragment(TimerFragment.this, 1);
+        editDialog.show(getFragmentManager(), "edit dialog");
 
+    }
+
+    @Override
+    public void sendInput(String materia, String actividad) {
+        mat.setText(materia);
+        act.setText(actividad);
     }
 }
