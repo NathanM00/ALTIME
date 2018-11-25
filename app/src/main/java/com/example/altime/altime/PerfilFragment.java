@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class PerfilFragment extends Fragment {
+    MainActivity activity;
     View vista;
 
     TextView nombre;
@@ -22,7 +23,6 @@ public class PerfilFragment extends Fragment {
     Button btn_logica;
     Button btn_bidi;
     Button btn_intro;
-
 
     @Nullable
     @Override
@@ -37,9 +37,14 @@ public class PerfilFragment extends Fragment {
         btn_intro = vista.findViewById(R.id.btn_materiaintro);
         btn_bidi = vista.findViewById(R.id.btn_materiabidi);
 
+
+
         btn_coe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FragmentTransaction frag = getFragmentManager().beginTransaction();
+                frag.replace(R.id.fragment_contenedor, new CoeFragment());
+                frag.commit();
 
                 //Intent intent = new Intent(PerfilFragment.this, );
                 //startActivity(intent);

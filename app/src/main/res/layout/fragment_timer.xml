@@ -10,49 +10,59 @@
         android:id="@+id/chronometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="124dp"
+        android:textSize="30dp" />
+
+    <ImageButton
+        android:id="@+id/plei"
+        android:layout_width="101dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/play" />
+
+    <ImageButton
+        android:id="@+id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/plei"
+        android:layout_below="@+id/chronometer"
+        android:layout_marginTop="-124dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/pause"
+        android:visibility="invisible"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="262dp"
+        android:layout_height="391dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="139dp"
-        android:textSize="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_start"
-        app:layout_constraintEnd_toEndOf="@+id/btn_start" />
+        android:src="@drawable/gif" />
 
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="189dp"
-        android:onClick="startChronometer"
-        android:text="Start"
-        app:layout_constraintBottom_toTopOf="@+id/btn_pause"
-        app:layout_constraintStart_toStartOf="@+id/btn_pause" />
+    <ImageView
+        android:id="@+id/descanso"
+        android:layout_width="98dp"
+        android:layout_height="144dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/plei"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/descanso" />
 
-    <Button
-        android:id="@+id/btn_pause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="117dp"
-        android:onClick="pauseChronometer"
-        android:text="Pause"
-        app:layout_constraintBottom_toTopOf="@+id/btn_guardar"
-        app:layout_constraintStart_toStartOf="@+id/btn_guardar" />
+    <TextView
+        android:id="@+id/mat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
 
-
-    <Button
-        android:id="@+id/btn_guardar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="52dp"
-        android:text="Save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/act"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
 
 
 </RelativeLayout>
