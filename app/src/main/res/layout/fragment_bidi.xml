@@ -14,14 +14,14 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="49dp"
-        android:src="@drawable/img_coe" />
+        android:src="@drawable/img_bidi" />
 
     <RelativeLayout
-        android:id="@+id/btn_lectura_coe"
+        android:id="@+id/btn_plancha_bidi"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="250dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
         android:background="@drawable/btn_iniciar"
         android:elevation="10dp"
         android:orientation="horizontal">
@@ -32,7 +32,7 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="52dp"
-            android:text="Lectura" />
+            android:text="Planchas" />
 
         <TextView
             android:id="@+id/tv_promedioLectura"
@@ -41,35 +41,6 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="17dp"
-            android:text="Promedio : 35 min" />
+            android:text="Promedio : 1 hora" />
     </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/btn_escritura_coe"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="320dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/btn_iniciar"
-        android:elevation="10dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="52dp"
-            android:text="Escritura" />
-
-        <TextView
-            android:id="@+id/tv_promedioEscritura"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="17dp"
-            android:text="Promedio : 50 min" />
-    </RelativeLayout>
-
 </RelativeLayout>

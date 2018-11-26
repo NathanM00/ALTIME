@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,13 +13,14 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="49dp"
-        android:src="@drawable/img_coe" />
+        android:src="@drawable/img_logica" />
 
     <RelativeLayout
-        android:id="@+id/btn_lectura_coe"
+        android:id="@+id/btn_lectura_logica"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="250dp"
+        android:layout_below="@+id/img_profile"
         android:layout_centerHorizontal="true"
         android:background="@drawable/btn_iniciar"
         android:elevation="10dp"
@@ -41,14 +41,15 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="17dp"
-            android:text="Promedio : 35 min" />
+            android:text="Promedio : 45 min" />
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/btn_escritura_coe"
+        android:id="@+id/btn_talleres_logica"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="320dp"
+        android:layout_below="@+id/img_profile"
         android:layout_centerHorizontal="true"
         android:background="@drawable/btn_iniciar"
         android:elevation="10dp"
@@ -60,7 +61,7 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="52dp"
-            android:text="Escritura" />
+            android:text="Talleres" />
 
         <TextView
             android:id="@+id/tv_promedioEscritura"
@@ -69,7 +70,7 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="17dp"
-            android:text="Promedio : 50 min" />
+            android:text="Promedio : 1 hora" />
     </RelativeLayout>
 
 </RelativeLayout>
