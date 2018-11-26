@@ -21,6 +21,7 @@ public class PerfilFragment extends Fragment {
 
     TextView nombre;
     TextView codigo;
+
     ImageButton btn_coe;
     ImageButton btn_algebra;
     ImageButton btn_logica;
@@ -30,6 +31,13 @@ public class PerfilFragment extends Fragment {
     Bundle bundle = new Bundle();
 
     FirebaseDatabase db;
+
+    Button btn_coe;
+    Button btn_algebra;
+    Button btn_logica;
+    Button btn_bidi;
+    Button btn_intro;
+    RelativeLayout lecturaunoxxd;
 
 
     @Nullable
@@ -49,6 +57,7 @@ public class PerfilFragment extends Fragment {
 
         DatabaseReference ref = db.getReference().child("usuarios");
 
+        lecturaunoxxd = vista.findViewById(R.id.lecturaunoxxd);
         btn_coe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,6 +105,12 @@ public class PerfilFragment extends Fragment {
 
             }
         });
+        lecturaunoxxd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         btn_bidi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,8 +123,6 @@ public class PerfilFragment extends Fragment {
 
             }
         });
-
-
 
         return vista;
     }
