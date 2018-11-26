@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
-
+    android:background="#ffffff"
     >
 
     <ImageView
@@ -20,7 +20,7 @@
     <ImageView
         android:id="@+id/imagen2"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="145dp"
         android:layout_below="@+id/imagen1"
         android:src="@drawable/noticiabiblio"
         tools:srcCompat="@tools:sample/backgrounds/scenic[12]" />
